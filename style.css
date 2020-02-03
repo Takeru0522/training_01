@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 * {
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: lighter; */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -36,11 +39,14 @@ nav {
     background: rgb(175, 175, 175);
 }
 
+/*  */
+.main {
+    padding: 0 4.5rem;
+}
 
-
-
-
-
+.section-title {
+    font-size: 30px;
+}
 
 
 
