@@ -1,3 +1,12 @@
+$('.main-carousel').flickity({
+    // options
+    cellAlign: 'left',
+    contain: true
+  });
+
+
+
+
 // $('#read-more').click(function() {
     // $('.important').css('color', 'red');
     // $('#more-text').slideDown();
