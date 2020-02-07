@@ -72,9 +72,21 @@ nav5.addEventListener('click', () => {
     // $('#image-wrapper').slideUp();
 //   });
 
+// const bg = $('#bg-image');
+// console.log(bg)
+
+// bg.css('background-image: url("img/placeholder.png")');
 
 
+// console.log($('.moment'), 'hey');
+// const $moment = $('.moment');
 
+// console.log($moment);
+
+
+// $('.moment').click(function() {
+//     console.log('Hello')
+// })
 // const circle = document.querySelector('#js-circle');
 // new mojs.Tween({
 // 　　repeat: 999,
@@ -89,39 +101,33 @@ nav5.addEventListener('click', () => {
 
 $(window).on('load scroll', function(){
 
-    //animatedのclassを持った要素をセレクタに指定
     const elem = $('.animated');
-    // console.log(elem, 'elem')
   
-    elem.each(function () {
+    elem.each(function (e) {
 
-        //data属性からアニメーション名を取得
-        // const isAnimate = $(this).data('animate');
-        // console.log(isAnimate); // => bounce
-        //animated要素に位置を取得
         const elemOffset = Math.round($(this).offset().top);
-        // console.log(elemOffset, 'elemOffset');
-        //現在のスクロールポジションを取得
-        const scrollPos = Math.round($(window).scrollTop());
-        // console.log(scrollPos, 'scrollPos')
-        //ウィンドウの高さを取得
-        const wh = $(window).height();
-        // console.log(wh, 'wh')
 
-        // while elem is in the window, keep showing
+        const scrollPos = Math.round($(window).scrollTop());
+
+        const wh = $(window).height();
+
         if(scrollPos > elemOffset - wh){
             $(this).addClass('showUp');
-            $(this).removeClass('showOff');
+            
+            // $(this).removeClass('showOff');
         } 
-        // when elem is top of window, elem off
-        if(scrollPos > elemOffset + 75) {
-            $(this).addClass('showOff');
-            $(this).removeClass('showUp');
-        }
-        // keep hiding elem until elem comes into window 
-        if(scrollPos < elemOffset - wh + 75) {
-            $(this).removeClass('showUp');
-            $(this).addClass('showOff');
-        }
+        // // when elem is top of window, elem off
+        // if(scrollPos > elemOffset + 75) {
+        //     $(this).addClass('showOff');
+        //     $(this).removeClass('showUp');
+        // }
+        // // keep hiding elem until elem comes into window 
+        // if(scrollPos < elemOffset - wh + 75) {
+        //     $(this).removeClass('showUp');
+        //     $(this).addClass('showOff');
+        // }
     });
 });
+
+
+
