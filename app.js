@@ -24,8 +24,6 @@ const sectionB = document.getElementById("section-z");
 const sectionC = document.getElementById("section-b");
 const sectionD = document.getElementById("section-c");
 
-// console.log(nav.offsetTop)
-
 
 nav1.addEventListener('click', () => {
     console.log('clicked')
@@ -65,39 +63,6 @@ nav5.addEventListener('click', () => {
     });
 })
 
-// $('#read-more').click(function() {
-    // $('.important').css('color', 'red');
-    // $('#more-text').slideDown();
-    // $('#read-more').hide();
-    // $('#image-wrapper').slideUp();
-//   });
-
-// const bg = $('#bg-image');
-// console.log(bg)
-
-// bg.css('background-image: url("img/placeholder.png")');
-
-
-// console.log($('.moment'), 'hey');
-// const $moment = $('.moment');
-
-// console.log($moment);
-
-
-// $('.moment').click(function() {
-//     console.log('Hello')
-// })
-// const circle = document.querySelector('#js-circle');
-// new mojs.Tween({
-// 　　repeat: 999,
-// 　　delay: 500,
-// 　　speed: 0.3,
-// 　　onUpdate: function(progress) {
-// 　　　　var bounceProgress = mojs.easing.bounce.out(progress);
-// 　　　　circle.style.transform = 'translateY(' + 200 * bounceProgress + 'px)';
-// 　　}
-// }).play();
-
 
 $(window).on('load scroll', function(){
 
@@ -130,4 +95,25 @@ $(window).on('load scroll', function(){
 });
 
 
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        nav.classList.toggle('nav-active');
+
+        // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.4}s`;
+            }
+        });
+        // Burger Animation
+        burger.classList.toggle('toggle');
+    });
+}
+navSlide();
