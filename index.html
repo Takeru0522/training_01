@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Japan</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
@@ -15,20 +16,25 @@
     <div class="top">
         <div class="navbar-wrap">
             <div id="logo">
-                <img id="logo" src="img/tk-logo1.png" alt="logoimage">
+                <img class="logo" id="nav-1" src="img/tk-logo1.png" alt="logoimage">
             </div>
             <div id="nav">
                 <ul class="nav-links">
-                    <li class="nav-1">About</li>
-                    <li class="nav-2">Event</li>
-                    <li class="nav-4">Gallery</li>
-                    <li class="nav-5">Contact</li>
+                    <li id="nav-2">About</li>
+                    <li id="nav-3">History</li>
+                    <li id="nav-4">Hobby</li>
+                    <li id="nav-5">Contact</li>
                 </ul>
             </div>
         </div>
 
        <div id="showcase"> 
-            <div class="bg-image"></div>
+            <div class="bg-image">
+                <div class="showcase-texts">
+                    <span class="showcase-text">LIFE IS</span><br>
+                    <span class="showcase-text">A JOURNEY</span>
+                </div>
+            </div>
             <!-- <div class="showcase-text">
                 <h1>Japan</h1>
             </div> -->
@@ -139,7 +145,7 @@
 
         
         <section id="section-b">
-            <h2 class="section-title">Event</h2>
+            <h2 class="section-title">Hobby</h2>
             <!-- Wrap around : 1st cell position center, last one come left of it -->
             <div class="carousel" data-flickity='{ "wrapAround": true }'>
                 <div class="carousel-cell">
@@ -162,7 +168,7 @@
             </div>
         </section>
         
-        <section id="section-d">
+        <section id="section-c">
             <h2 class="section-title">Contact</h2>
             <div class="form-wrap">
                 <form action="">
@@ -176,6 +182,8 @@
         </section>
     </div>
 
+    <div class="animated"></div>
+
     <footer>
 
     </footer>
@@ -185,6 +193,11 @@
         <div id="read-more">続きを読む</div>
         <div class="circle" id="js-circle"></div>       
     </div> -->
+    
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
     <script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="app.js"></script>

@@ -37,10 +37,12 @@ nav {
     font-size: 24px;
     margin-left: 1.5rem;
     float: left;
+    cursor: pointer;
 }
-#logo {
-    height: 40px;
-
+/*  */
+#nav-1 {
+    height: 30px;
+    cursor: pointer;
 }
 
 #showcase .bg-image {
@@ -53,6 +55,28 @@ nav {
     width: 100%;
     height: 100vh;
     z-index: -1;
+}
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap'); */
+.showcase-texts {
+    height: auto;
+    width: auto;
+    /* border: 1px solid orange; */
+    position: absolute;
+    top: 64vh;
+    left: 45vw;
+    /* background-color: orange; */
+
+}
+.showcase-text {
+    color: white;
+    font-size: 100px;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Permanent Marker', cursive; */
+    /* font-family: 'Satisfy', cursive; */
+    opacity: .5;
+    /* font-weight: bold; */
 }
 
 .main {
@@ -242,6 +266,10 @@ section {
     border-radius: 0;
 } */
 
+#section-c > .section-title {
+    text-align: center;    
+}
+
 
 form {
     display: flex;
@@ -260,6 +288,8 @@ form > input, form > textarea, form > button {
 
 form > input, form > textarea {
     width: 100%;
+    border-radius: 5px;
+    color: rgb(49, 49, 49);
 }
 form > input {
     height: 30px;
@@ -274,6 +304,14 @@ form > button {
     /* margin: inherit auto; */
     height: 35px;
     color: rgb(49, 49, 49);
+    border-radius: 7px;
+    border: 1px solid rgb(49, 49, 49);
+    background-color: ;
+    background: rgb(18,207,240);
+    background: linear-gradient(321deg, rgba(18,207,240,1) 0%, rgba(79,131,255,1) 100%);
+}
+form > button:hover {
+    opacity: .7
 }
 
 
@@ -295,4 +333,52 @@ form > button {
     height: 50px;
     background: navy;
     border-radius: 50%;
+}
+
+.animated {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: orange;
+    opacity: 0;
+}
+.showUp {
+    animation: test0 1.5s;
+}
+@keyframes test0 {
+    from {
+        /* width: 150px; */
+        opacity: 0;       
+    }
+    to {
+        /* width: 300px; */
+        opacity: 1;
+    }
+}
+.showOff {
+    animation: test1 1.5s;
+}
+@keyframes test1 {
+    from {
+        /* width: 300px; */
+        opacity: 1;
+    }
+    to {
+        /* width: 150px; */
+        opacity: 0;
+        /* top: 30px; */
+    }
+}
+
+
+
+
+
+
+
+
+footer {
+    height: 600px;
+    width: 100%;
+    border: 1px solid rgb(91, 160, 240);
 }
