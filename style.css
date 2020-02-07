@@ -20,10 +20,12 @@ body {
 
 .navbar-wrap {
     height: 10%;
+    width: 100%;
     padding: 0 4.5rem;
     /* background: grey; */
     background-color: rgba(200, 200, 200, .1);
     opacity: 0.9;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,6 +206,9 @@ section {
 }
 
 @media(max-width: 850px) {
+    .navbar-wrap {
+        position: relative;
+    }
     .main {
         padding: 0 .5rem;
     }
